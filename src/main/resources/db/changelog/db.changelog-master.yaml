@@ -1,0 +1,100 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1-AZA
+      author: Anas ZAHOURI
+      comment : "Creates table DEVELOPPERS & PROGRAMMING LANGUAGE"
+      changes:
+        - createTable:
+            tableName: DEVELOPPERS
+            columns:
+              - column:
+                  name: ID
+                  type: INT
+                  constraints:
+                    primaryKey: true
+                    nullable: FALSE
+              - column:
+                  name: FIRST_NAME
+                  type: VARCHAR
+                  constraints:
+                    nullable: FALSE
+              - column:
+                  name: LAST_NAME
+                  type: VARCHAR
+                  constraints:
+                    nullable: FALSE
+              - column:
+                  name: SALARY
+                  type: INT
+                  constraints:
+                    nullable: TRUE
+
+        - createTable:
+            tableName: PROGRAMMING_LANGUAGE
+            columns:
+              - column:
+                  name: ID
+                  type: INT
+                  constraints:
+                    primaryKey: true
+                    nullable: FALSE
+              - column:
+                  name: LANGUAGE_NAME
+                  type: VARCHAR
+                  constraints:
+                    nullable: FALSE
+        - createTable:
+            tableName: DEVELOPPERS_PROGRAMMING_LANGUAGE
+            columns:
+              - column:
+                  name: DEV_ID
+                  type: INT
+                  constraints:
+                    primaryKey: true
+                    nullable: FALSE
+              - column:
+                  name: PL_ID
+                  type: INT
+                  constraints:
+                    primaryKey: true
+                    nullable: FALSE
+
+
+  - changeSet:
+      id: 2-AZA
+      author: Anas ZAHOURI
+      comment : "Insert starting DEVELOPPERS"
+      changes:
+        - insert:
+            tableName: DEVELOPPERS
+            columns:
+              - column:
+                  name: ID
+                  value: 1
+              - column:
+                  name: FIRST_NAME
+                  value: "ANAS"
+              - column:
+                  name: LAST_NAME
+                  value: "ZAHOURI"
+              - column:
+                  name: SALARY
+                  value: 1000
+        - insert:
+            tableName: PROGRAMMING_LANGUAGE
+            columns:
+              - column:
+                  name: ID
+                  value: 1
+              - column:
+                  name: LANGUAGE_NAME
+                  value: "JAVA"
+        - insert:
+            tableName: DEVELOPPERS_PROGRAMMING_LANGUAGE
+            columns:
+              - column:
+                  name: DEV_ID
+                  value: 1
+              - column:
+                  name: PL_ID
+                  value: 1
