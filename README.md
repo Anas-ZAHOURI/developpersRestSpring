@@ -40,3 +40,12 @@ mvn install
 cf push choose-namefor-your-server-here -p target/*.jar -b https://github.com/cloudfoundry/java-buildpack.git
 
 ```
+### To test rest ws
+```
+GET: http://localhost:8080/developpers/version
+GET: http://localhost:8080/developpers/developper/1
+PUT: http://localhost:8080/developpers/developper/1
+DELETE: http://localhost:8080/developpers/developper/1
+POST: http://localhost:8080/developpers/developper
+DELETE: http://localhost:8080/developpers/developper
+```
