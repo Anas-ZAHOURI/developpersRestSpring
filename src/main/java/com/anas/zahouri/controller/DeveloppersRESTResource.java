@@ -23,7 +23,7 @@ import java.util.List;
 @Produces(MediaType.APPLICATION_JSON)
 public interface DeveloppersRESTResource {
     @GET
-    @Path("/developper/")
+    @Path("/developpers/")
     List<Developper> listAllDeveloppers();
 
     @GET
@@ -45,7 +45,7 @@ public interface DeveloppersRESTResource {
 
 
     @DELETE
-    @Path("/developper/")
+    @Path("/developpers/")
     void deleteAllDeveloppers();
 
     @GET

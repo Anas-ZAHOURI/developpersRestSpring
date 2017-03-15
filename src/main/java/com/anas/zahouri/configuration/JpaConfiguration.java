@@ -2,7 +2,6 @@ package com.anas.zahouri.configuration;
 
 import java.util.Properties;
 
-import javax.naming.NamingException;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
@@ -73,10 +72,10 @@ public class JpaConfiguration {
 	 * Entity Manager Factory setup.
 	 */
 	@Bean
-	public LocalContainerEntityManagerFactoryBean entityManagerFactory() throws NamingException {
+	public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
 		LocalContainerEntityManagerFactoryBean factoryBean = new LocalContainerEntityManagerFactoryBean();
 		factoryBean.setDataSource(dataSource());
-		factoryBean.setPackagesToScan(new String[] { "com.anas.zahouri.model" });
+		factoryBean.setPackagesToScan("com.anas.zahouri.model");
 		factoryBean.setJpaVendorAdapter(jpaVendorAdapter());
 		factoryBean.setJpaProperties(jpaProperties());
 		return factoryBean;
@@ -87,8 +86,7 @@ public class JpaConfiguration {
 	 */
 	@Bean
 	public JpaVendorAdapter jpaVendorAdapter() {
-		HibernateJpaVendorAdapter hibernateJpaVendorAdapter = new HibernateJpaVendorAdapter();
-		return hibernateJpaVendorAdapter;
+		return new HibernateJpaVendorAdapter();
 	}
 
 	/*

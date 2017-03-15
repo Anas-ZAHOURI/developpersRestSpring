@@ -15,14 +15,14 @@ import org.springframework.transaction.annotation.Transactional;
 public class DevelopperServiceImpl implements DevelopperService {
 
 	@Autowired
-	private DevelopperRepository DevelopperRepository;
+	private DevelopperRepository developperRepository;
 
 	public Developper findById(Long id) {
-		return DevelopperRepository.findById(id);
+		return developperRepository.findById(id);
 	}
 
 	public void saveDevelopper(Developper developper) {
-		DevelopperRepository.save(developper);
+		developperRepository.save(developper);
 	}
 
 	public void updateDevelopper(Developper developper){
@@ -30,15 +30,15 @@ public class DevelopperServiceImpl implements DevelopperService {
 	}
 
 	public void deleteDevelopperById(Long id){
-		DevelopperRepository.delete(id);
+		developperRepository.delete(id);
 	}
 
 	public void deleteAllDeveloppers(){
-		DevelopperRepository.deleteAll();
+		developperRepository.deleteAll();
 	}
 
 	public List<Developper> findAllDeveloppers(){
-		return DevelopperRepository.findAll();
+		return developperRepository.findAll();
 	}
 
 	public boolean isDevelopperExist(Developper developper) {

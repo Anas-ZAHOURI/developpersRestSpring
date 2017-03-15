@@ -27,8 +27,7 @@ public class DeveloppersRESTResourceImpl implements DeveloppersRESTResource{
 	 */
 	@Override
 	public List<Developper> listAllDeveloppers() {
-		List<Developper> developpers = developperService.findAllDeveloppers();
-		return developpers;
+		return developperService.findAllDeveloppers();
 	}
 
 	/**
@@ -39,8 +38,7 @@ public class DeveloppersRESTResourceImpl implements DeveloppersRESTResource{
 	@Override
 	public Developper getDevelopper(long id) {
 		logger.info("Fetching Developper with id {}", id);
-		Developper developper = developperService.findById(id);
-		return developper;
+		return developperService.findById(id);
 	}
 
 	/**

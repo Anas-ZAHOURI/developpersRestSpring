@@ -42,10 +42,11 @@ cf push choose-namefor-your-server-here -p target/*.jar -b https://github.com/cl
 ```
 ### To test rest ws
 ```
-GET: http://localhost:8080/developpers/version
-GET: http://localhost:8080/developpers/developper/1
-PUT: http://localhost:8080/developpers/developper/1
-DELETE: http://localhost:8080/developpers/developper/1
-POST: http://localhost:8080/developpers/developper
-DELETE: http://localhost:8080/developpers/developper
+To get the version (GET Request): http://localhost:8080/developpers/version
+Retrieve All developpers (GET Request): http://localhost:8080/developpers/developpers/
+Retrieve Single Developper (GET Request): http://localhost:8080/developpers/developper/1
+Update a Developper (PUT Request): http://localhost:8080/developpers/developper/1
+Delete a Developper (DELETE Request): http://localhost:8080/developpers/developper/1
+Create a Developper (POST Request): http://localhost:8080/developpers/developper
+Delete All developpers(DELETE Request): http://localhost:8080/developpers/developpers
 ```
