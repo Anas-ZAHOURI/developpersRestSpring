@@ -13,8 +13,8 @@ A simple single table CRUD example with [Spring Data JPA](http://projects.spring
 ### Just execute it with maven
 
 ```
-git clone https://github.com/anosi22/developpersTestRest.git
-cd developpersTestRest 
+git clone https://github.com/anosi22/developpersRestSpring.git
+cd developpersRestSpring 
 mvn spring-boot:run  -Dspring.profiles.active=local
 ```
 
@@ -23,8 +23,8 @@ mvn spring-boot:run  -Dspring.profiles.active=local
 The built .jar file is auto-runnable, so as you can move it to any computer having java installed and run the app. 
 
 ```
-git clone https://github.com/anosi22/developpersTestRest.git
-cd developpersTestRest
+git clone https://github.com/anosi22/developpersRestSpring.git
+cd developpersRestSpring
 mvn package
 java -jar target/developpers-0.0.1-SNAPSHOT.jar --spring.profiles.active=local
 ```
@@ -34,8 +34,8 @@ java -jar target/developpers-0.0.1-SNAPSHOT.jar --spring.profiles.active=local
 The built jar file is really simple to deploy in modern PaaS services. E.g. if you have existing Bluemix account and are already logged in with your cf (CLI) tools just execute following:
 
 ```
-git clone https://github.com/anosi22/developpersTestRest.git
-cd developpersTestRest
+git clone https://github.com/anosi22/developpersRestSpring.git
+cd developpersRestSpring
 mvn install
 cf push choose-namefor-your-server-here -p target/*.jar -b https://github.com/cloudfoundry/java-buildpack.git
 
